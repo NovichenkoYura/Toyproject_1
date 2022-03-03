@@ -1,9 +1,29 @@
-.footer-field {
-  @media screen and (min-width: 768px) and (max-width: 1199) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.currency {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+}
+
+#currency__input {
+  max-width: 70px;
+  margin-bottom: 10px;
+}
+
+#currency_result {
+  max-width: 70px;
+  margin-bottom: 10px;
+}
+
+#currency__btn {
+  max-width: 90px;
+  margin-bottom: 10px;
+}
+
+#currency__choice {
+  max-width: 120px;
+  margin-bottom: 10px;
 }
 
 .footer-field__input {

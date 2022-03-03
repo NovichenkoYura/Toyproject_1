@@ -6,20 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="scripts/script.js" defer></script>
 </head>
 <body>
-    <input type="number">
-    <label for="currency">Choose the currency:</label>
-    <select name="currency" id="currency">
-        <option value="usdollar">Долар США</option>
-        <option value="swcrone">Шведська крона</option>
-        <option value="norcrone">Норвезька крона</option>
-    </select>
-    <button type="button">Рассчитать</button>
-    <input type="number">
-    
-    </div>
-    
+    <div class="currency">
+        <input id="currency__input" type="number">
+        <label for="currency">Choose the currency:</label>
+        <select id="currency__choice" name="currency" id="currency">
+        </select>
+        <button id="currency__btn" type="button" onclick="calculateCurrency()">Рассчитать</button>
+        <input id="currency_result" type="number">
+    </div>    
 
 </body>
 </html>
