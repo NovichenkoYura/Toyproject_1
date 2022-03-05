@@ -11,7 +11,7 @@ const select = document.getElementById("currency__choice");
 response.forEach((element) => {
   const newOption = document.createElement("option");
   newOption.value = element.txt;
-  newOption.label = element.txt;
+  newOption.label = element.txt + " " + element.cc;
   select.append(newOption);
 });
 
@@ -26,4 +26,27 @@ function calculateCurrency() {
   const result = currencyInput * rate;
 
   document.getElementById("currency_result").value = result;
+}
+
+const selectRev = document.getElementById("currency_rev__choice");
+response.forEach((element) => {
+  const newOption = document.createElement("option");
+  newOption.value = element.txt;
+  newOption.label = element.txt;
+  selectRev.append(newOption);
+});
+
+function calculateHrivna() {
+  //получить данные с ввода (количество валюты) (не забыть .value)
+  const currencyInputRev = document.getElementById("currency_rev__input").value;
+
+  //это значение курса
+  const currencyTextRev = document.getElementById("currency_rev__choice").value;
+  const rateRev = response.find(
+    (element) => element.txt === currencyTextRev
+  ).rate;
+  //получить (курс * количество)
+  const resultRev = currencyInputRev / rateRev;
+
+  document.getElementById("currency_rev_result").value = resultRev;
 }
